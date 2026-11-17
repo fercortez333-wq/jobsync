@@ -1,0 +1,13 @@
+{
+  "name": "JobSync",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "hostRequirements": { "cpus": 2 },
+  "forwardPorts": [3737],
+  "portsAttributes": {
+    "3737": { "label": "JobSync", "onAutoForward": "openBrowser" }
+  },
+  "postStartCommand": "bash .devcontainer/start-jobsync.sh"
+}
